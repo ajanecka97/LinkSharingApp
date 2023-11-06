@@ -1,14 +1,22 @@
 <app-auth-box>
-  <h1>Login</h1>
-  <p>Add your details below to get back into the app</p>
-  <form>
-    <label for="login-form-email">Email address</label>
-    <input id="login-form-email" />
-
-    <label for="login-form-password">Password</label>
-    <input id="login-form-password" />
+  <div class="header-box">
+    <h1>Login</h1>
+    <p>Add your details below to get back into the app</p>
+  </div>
+  <form class="form-box">
+    <app-input
+      id="login-form-email"
+      label="Email address"
+      placeholder="e.g. alex@email.com"
+    ></app-input>
+    <app-input
+      id="login-form-password"
+      label="Password"
+      placeholder="Enter your password"
+    ></app-input>
 
     <button>Login</button>
+
+    <p>Don't have an account? <a [href]="">Create account</a></p>
   </form>
-  <p>Don't have an account? <a [href]="">Create account</a></p>
 </app-auth-box>
