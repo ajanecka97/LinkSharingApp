@@ -1,0 +1,26 @@
+@import "../../styles/variables.scss";
+
+.auth-box-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $background-1;
+
+  .auth-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.1875rem;
+
+    .form-container {
+      background-color: $background-0;
+      display: flex;
+      padding: 2.5rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2.5rem;
+      align-self: stretch;
+    }
+  }
+}

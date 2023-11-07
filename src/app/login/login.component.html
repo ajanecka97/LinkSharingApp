@@ -1,0 +1,26 @@
+<app-auth-box>
+  <div class="header-box">
+    <h1 class="header-text">Login</h1>
+    <p>Add your details below to get back into the app</p>
+  </div>
+  <form class="form-box">
+    <app-input
+      id="login-form-email"
+      label="Email address"
+      icon="/assets/images/icon-email.svg"
+      placeholder="e.g. alex@email.com"
+    ></app-input>
+    <app-input
+      id="login-form-password"
+      label="Password"
+      icon="/assets/images/icon-password.svg"
+      placeholder="Enter your password"
+    ></app-input>
+
+    <button class="btn w-100">Login</button>
+
+    <p class="w-100 text-center">
+      Don't have an account? <a [href]="">Create account</a>
+    </p>
+  </form>
+</app-auth-box>
