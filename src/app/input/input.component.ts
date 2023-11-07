@@ -8,5 +8,6 @@ import { Component, Input } from '@angular/core';
 export class InputComponent {
   @Input() public inputId = '';
   @Input() public label = '';
+  @Input() public icon = '';
   @Input() public placeholder = '';
 }

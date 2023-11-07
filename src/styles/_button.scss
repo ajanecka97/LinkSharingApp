@@ -1,0 +1,14 @@
+.btn {
+  display: flex;
+  width: 14.1875rem;
+  padding: 0.6875rem 1.6875rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  border-radius: 0.5rem;
+  border-width: 0;
+  background-color: $primary;
+  color: $background-0;
+}

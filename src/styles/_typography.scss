@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("/assets/fonts/static/IntrumentSans-Regular.ttf");
+  line-height: 150%;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Instrument Sans";
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+p,
+.body-m {
+  font-family: "Instrument Sans";
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+label,
+.body-s {
+  font-family: "Instrument Sans";
+  font-size: 0.75rem;
+  font-weight: normal;
+}
+
+.text-center {
+  text-align: center;
+}
