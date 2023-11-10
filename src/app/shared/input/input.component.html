@@ -1,7 +1,22 @@
-<div class="input">
+<div
+  class="input"
+  [class.error]="!formControl.valid && !formControl.pristine"
+  [class.focused]="inputFocused$ | async"
+>
   <label [for]="inputId">{{ label }}</label>
   <div class="input-box">
     <img *ngIf="icon != null" [src]="icon" />
-    <input class="body-m" [id]="inputId" [placeholder]="placeholder" />
+    <input
+      class="body-m"
+      [id]="inputId"
+      [formControl]="formControl"
+      [placeholder]="placeholder"
+      [type]="inputType"
+      (focus)="inputFocused$.next(true)"
+      (blur)="inputFocused$.next(false)"
+    />
+    <div *ngIf="!formControl.valid" class="body-s error-text">
+      {{ error$ | async }}
+    </div>
   </div>
 </div>

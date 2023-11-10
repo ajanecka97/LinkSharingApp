@@ -7,6 +7,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { AuthBoxComponent } from './auth/auth-box/auth-box.component';
 import { InputComponent } from './shared/input/input.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { SignUpComponent } from './auth/sign-up/sign-up.component';
     InputComponent,
     SignUpComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
