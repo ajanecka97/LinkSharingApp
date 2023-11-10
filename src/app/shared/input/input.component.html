@@ -15,8 +15,8 @@
       (focus)="inputFocused$.next(true)"
       (blur)="inputFocused$.next(false)"
     />
-    <div *ngIf="!formControl.valid" class="body-s error-text">
-      {{ error$ | async }}
+    <div *ngIf="error$ | async as error" class="body-s error-text">
+      {{ error }}
     </div>
   </div>
 </div>

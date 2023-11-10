@@ -7,20 +7,25 @@
     <app-input
       id="sign-up-form-email"
       label="Email address"
+      [control]="signupForm.controls.email"
       icon="/assets/images/icon-email.svg"
       placeholder="e.g. alex@email.com"
     ></app-input>
     <app-input
       id="sign-up-form-password"
       label="Create password"
+      [control]="signupForm.controls.password"
       icon="/assets/images/icon-password.svg"
       placeholder="At least 8 characters"
+      inputType="password"
     ></app-input>
     <app-input
       id="sign-up-form-confirm-password"
       label="Confirm password"
+      [control]="signupForm.controls.confirmPassword"
       icon="/assets/images/icon-password.svg"
       placeholder="At least 8 characters"
+      inputType="password"
     ></app-input>
 
     <p class="body-s">Password must contain at least 8 characters</p>

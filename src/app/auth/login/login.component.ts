@@ -11,7 +11,10 @@ import { AuthRequest } from '../auth.model';
 export class LoginComponent {
   public loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.minLength(8)]),
+    password: new FormControl('', [
+      Validators.required,
+      Validators.minLength(8),
+    ]),
   });
 
   public login(): void {}
