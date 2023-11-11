@@ -30,6 +30,7 @@ export class InputComponent {
     if (errors['required']) return 'Empty';
     if (errors['minlength']) return 'Too short';
     if (errors['email']) return 'Invalid email';
+    if (errors['password']) return 'Invalid password';
 
     return 'Unknown validation error';
   }

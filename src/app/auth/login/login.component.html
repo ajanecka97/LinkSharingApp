@@ -3,7 +3,7 @@
     <h1 class="header-text">Login</h1>
     <p>Add your details below to get back into the app</p>
   </div>
-  <form class="form-box">
+  <form [formGroup]="loginForm" class="form-box" (ngSubmit)="login()">
     <app-input
       id="login-form-email"
       label="Email address"
@@ -20,7 +20,7 @@
       inputType="password"
     ></app-input>
 
-    <button class="btn w-100">Login</button>
+    <button class="btn w-100" type="submit">Login</button>
 
     <p class="w-100 text-center">
       Don't have an account?

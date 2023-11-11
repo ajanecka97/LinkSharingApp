@@ -8,6 +8,7 @@ import { AuthBoxComponent } from './auth/auth-box/auth-box.component';
 import { InputComponent } from './shared/input/input.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AuthBoxComponent,
     InputComponent,
     SignUpComponent,
+    DashboardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
