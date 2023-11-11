@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import "../../../styles/variables.scss";
 
 .auth-box-container {
   height: 100%;
@@ -15,6 +15,7 @@
 
     .form-container {
       background-color: $background-0;
+      width: 24.75rem;
       display: flex;
       padding: 2.5rem;
       flex-direction: column;

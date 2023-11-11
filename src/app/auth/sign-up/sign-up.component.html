@@ -1,0 +1,39 @@
+<app-auth-box>
+  <div class="header-box">
+    <h1 class="header-text">Create account</h1>
+    <p>Let's get you started sharing your links!</p>
+  </div>
+  <form class="form-box">
+    <app-input
+      id="sign-up-form-email"
+      label="Email address"
+      [control]="signupForm.controls.email"
+      icon="/assets/images/icon-email.svg"
+      placeholder="e.g. alex@email.com"
+    ></app-input>
+    <app-input
+      id="sign-up-form-password"
+      label="Create password"
+      [control]="signupForm.controls.password"
+      icon="/assets/images/icon-password.svg"
+      placeholder="At least 8 characters"
+      inputType="password"
+    ></app-input>
+    <app-input
+      id="sign-up-form-confirm-password"
+      label="Confirm password"
+      [control]="signupForm.controls.confirmPassword"
+      icon="/assets/images/icon-password.svg"
+      placeholder="At least 8 characters"
+      inputType="password"
+    ></app-input>
+
+    <p class="body-s">Password must contain at least 8 characters</p>
+
+    <button class="btn w-100">Create new account</button>
+
+    <p class="w-100 text-center">
+      Already have an account? <a [routerLink]="['/login']">Login</a>
+    </p>
+  </form>
+</app-auth-box>

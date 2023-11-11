@@ -3,22 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { AuthBoxComponent } from './auth-box/auth-box.component';
-import { InputComponent } from './input/input.component';
+import { LoginComponent } from './auth/login/login.component';
+import { AuthBoxComponent } from './auth/auth-box/auth-box.component';
+import { InputComponent } from './shared/input/input.component';
+import { SignUpComponent } from './auth/sign-up/sign-up.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     AuthBoxComponent,
-    InputComponent
+    InputComponent,
+    SignUpComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

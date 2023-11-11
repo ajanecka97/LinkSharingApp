@@ -7,20 +7,24 @@
     <app-input
       id="login-form-email"
       label="Email address"
+      [control]="loginForm.controls.email"
       icon="/assets/images/icon-email.svg"
       placeholder="e.g. alex@email.com"
     ></app-input>
     <app-input
       id="login-form-password"
       label="Password"
+      [control]="loginForm.controls.password"
       icon="/assets/images/icon-password.svg"
       placeholder="Enter your password"
+      inputType="password"
     ></app-input>
 
     <button class="btn w-100">Login</button>
 
     <p class="w-100 text-center">
-      Don't have an account? <a [href]="">Create account</a>
+      Don't have an account?
+      <a [routerLink]="['/sign-up']">Create account</a>
     </p>
   </form>
 </app-auth-box>
