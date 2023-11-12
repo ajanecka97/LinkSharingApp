@@ -9,6 +9,11 @@ import { InputComponent } from './shared/input/input.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { NavbarComponent } from './dashboard/navbar/navbar.component';
+import { ToggleButtonsComponent } from './shared/toggle-buttons/toggle-buttons.component';
+import { AngularSvgIconModule } from 'angular-svg-icon';
+import { HttpClientModule } from '@angular/common/http';
+import { MobilePreviewComponent } from './dashboard/mobile-preview/mobile-preview.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +23,17 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     InputComponent,
     SignUpComponent,
     DashboardComponent,
+    NavbarComponent,
+    ToggleButtonsComponent,
+    MobilePreviewComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    AngularSvgIconModule.forRoot(),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,8 +1,7 @@
 .btn {
   display: flex;
-  width: 14.1875rem;
   padding: 0.6875rem 1.6875rem;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
@@ -16,5 +15,33 @@
     background-color: $primary-light;
     box-shadow: 0px 0px 32px 0px rgba(99, 60, 255, 0.25);
     cursor: pointer;
+  }
+
+  &-secondary {
+    border: 1px solid $primary;
+    background-color: $background-0;
+    color: $primary;
+  }
+
+  &-toggle {
+    background-color: $background-0;
+    color: $gray;
+
+    img {
+      color: red;
+
+      svg {
+        fill: red;
+
+        path: {
+          fill: red !important;
+        }
+      }
+    }
+
+    &:hover {
+      background-color: $background-0;
+      color: $primary;
+    }
   }
 }
