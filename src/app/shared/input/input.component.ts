@@ -31,6 +31,8 @@ export class InputComponent {
     if (errors['minlength']) return 'Too short';
     if (errors['email']) return 'Invalid email';
     if (errors['password']) return 'Invalid password';
+    if (errors['noMatch']) return "Passwords don't match";
+    if (errors['alreadyExists']) return 'User already exists';
 
     return 'Unknown validation error';
   }

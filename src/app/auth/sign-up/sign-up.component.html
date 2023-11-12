@@ -3,7 +3,7 @@
     <h1 class="header-text">Create account</h1>
     <p>Let's get you started sharing your links!</p>
   </div>
-  <form class="form-box">
+  <form [formGroup]="signupForm" class="form-box" (ngSubmit)="signUp()">
     <app-input
       id="sign-up-form-email"
       label="Email address"
@@ -33,7 +33,7 @@
     <button class="btn w-100">Create new account</button>
 
     <p class="w-100 text-center">
-      Already have an account? <a [routerLink]="['/login']">Login</a>
+      Already have an account? <a [routerLink]="['/sign-in']">Login</a>
     </p>
   </form>
 </app-auth-box>

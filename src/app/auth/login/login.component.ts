@@ -12,13 +12,18 @@ import { Router } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LoginComponent {
-  public loginForm = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [
-      Validators.required,
-      Validators.minLength(8),
-    ]),
-  });
+  public loginForm = new FormGroup(
+    {
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [
+        Validators.required,
+        Validators.minLength(8),
+      ]),
+    },
+    {
+      updateOn: 'blur',
+    }
+  );
 
   constructor(private authService: AuthService, private router: Router) {}
 

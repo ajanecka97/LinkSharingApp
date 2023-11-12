@@ -35,7 +35,7 @@ export class AuthService {
   }
 
   public register(email: string, password: string): ApiResponse<AuthResponse> {
-    if (!this.allowedLogins.has(email)) {
+    if (this.allowedLogins.has(email)) {
       return this.generateError(ErrorCode.UserAlreadyExists);
     }
 
