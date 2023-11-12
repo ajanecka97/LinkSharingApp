@@ -14,6 +14,7 @@ import { ToggleButtonsComponent } from './shared/toggle-buttons/toggle-buttons.c
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { HttpClientModule } from '@angular/common/http';
 import { MobilePreviewComponent } from './dashboard/mobile-preview/mobile-preview.component';
+import { LinksFormComponent } from './dashboard/links-form/links-form.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { MobilePreviewComponent } from './dashboard/mobile-preview/mobile-previe
     NavbarComponent,
     ToggleButtonsComponent,
     MobilePreviewComponent,
+    LinksFormComponent,
   ],
   imports: [
     BrowserModule,

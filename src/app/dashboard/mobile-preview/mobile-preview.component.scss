@@ -1,0 +1,11 @@
+@import "../../../styles/variables";
+
+:host {
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+  background-color: $background-0;
+  height: 100%;
+  width: 35rem;
+}
