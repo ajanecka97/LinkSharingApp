@@ -17,26 +17,24 @@ import { MobilePreviewComponent } from './dashboard/mobile-preview/mobile-previe
 import { LinksFormComponent } from './dashboard/links-form/links-form.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    AuthBoxComponent,
-    InputComponent,
-    SignUpComponent,
-    DashboardComponent,
-    NavbarComponent,
-    ToggleButtonsComponent,
-    MobilePreviewComponent,
-    LinksFormComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    AngularSvgIconModule.forRoot(),
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
+    declarations: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        AngularSvgIconModule.forRoot(),
+        LoginComponent,
+        AuthBoxComponent,
+        InputComponent,
+        SignUpComponent,
+        DashboardComponent,
+        NavbarComponent,
+        ToggleButtonsComponent,
+        MobilePreviewComponent,
+        LinksFormComponent,
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
 })
 export class AppModule {}

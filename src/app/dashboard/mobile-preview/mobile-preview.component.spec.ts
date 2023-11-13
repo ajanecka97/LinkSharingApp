@@ -8,8 +8,8 @@ describe('MobilePreviewComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [MobilePreviewComponent]
-    });
+    imports: [MobilePreviewComponent]
+});
     fixture = TestBed.createComponent(MobilePreviewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

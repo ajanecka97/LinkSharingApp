@@ -1,15 +1,24 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { AuthRequest } from '../auth.model';
 import { AuthService } from '../services/auth.service';
 import { ErrorApiResponse, ErrorCode } from 'src/app/shared/shared.model';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { InputComponent } from '../../shared/input/input.component';
+import { AuthBoxComponent } from '../auth-box/auth-box.component';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [
+        AuthBoxComponent,
+        ReactiveFormsModule,
+        InputComponent,
+        RouterLink,
+    ],
 })
 export class LoginComponent {
   public loginForm = new FormGroup(

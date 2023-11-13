@@ -8,8 +8,8 @@ describe('AuthBoxComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AuthBoxComponent]
-    });
+    imports: [AuthBoxComponent]
+});
     fixture = TestBed.createComponent(AuthBoxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

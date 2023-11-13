@@ -1,13 +1,22 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { ErrorApiResponse, ErrorCode } from 'src/app/shared/shared.model';
 import { AuthService } from '../services/auth.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { InputComponent } from '../../shared/input/input.component';
+import { AuthBoxComponent } from '../auth-box/auth-box.component';
 
 @Component({
-  selector: 'app-sign-up',
-  templateUrl: './sign-up.component.html',
-  styleUrls: ['./sign-up.component.scss'],
+    selector: 'app-sign-up',
+    templateUrl: './sign-up.component.html',
+    styleUrls: ['./sign-up.component.scss'],
+    standalone: true,
+    imports: [
+        AuthBoxComponent,
+        ReactiveFormsModule,
+        InputComponent,
+        RouterLink,
+    ],
 })
 export class SignUpComponent {
   public signupForm = new FormGroup(
