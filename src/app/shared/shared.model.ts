@@ -1,4 +1,7 @@
-export type ApiResponse<T> = T | ErrorApiResponse;
+export interface ApiResponse<T> {
+  type: 'success' | 'error';
+  body: T | ErrorApiResponse;
+}
 
 export interface ErrorApiResponse {
   httpErrorCode: number;

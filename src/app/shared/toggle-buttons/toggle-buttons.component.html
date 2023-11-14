@@ -1,0 +1,8 @@
+<button
+  *ngFor="let option of options"
+  [id]="option.id"
+  class="btn btn-toggle heading-s"
+>
+  <svg-icon [src]="option.icon" [svgStyle]="{ fill: 'red' }"></svg-icon>
+  {{ option.label }}
+</button>

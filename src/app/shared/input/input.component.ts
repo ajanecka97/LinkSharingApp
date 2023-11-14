@@ -1,11 +1,18 @@
 import { Component, Input } from '@angular/core';
-import { FormControl, ValidationErrors } from '@angular/forms';
+import { FormControl, ValidationErrors, ReactiveFormsModule } from '@angular/forms';
 import { BehaviorSubject, Observable, filter, map } from 'rxjs';
+import { NgIf, AsyncPipe } from '@angular/common';
 
 @Component({
-  selector: 'app-input',
-  templateUrl: './input.component.html',
-  styleUrls: ['./input.component.scss'],
+    selector: 'app-input',
+    templateUrl: './input.component.html',
+    styleUrls: ['./input.component.scss'],
+    standalone: true,
+    imports: [
+        NgIf,
+        ReactiveFormsModule,
+        AsyncPipe,
+    ],
 })
 export class InputComponent {
   @Input() public inputId = '';
@@ -30,6 +37,9 @@ export class InputComponent {
     if (errors['required']) return 'Empty';
     if (errors['minlength']) return 'Too short';
     if (errors['email']) return 'Invalid email';
+    if (errors['password']) return 'Invalid password';
+    if (errors['noMatch']) return "Passwords don't match";
+    if (errors['alreadyExists']) return 'User already exists';
 
     return 'Unknown validation error';
   }
