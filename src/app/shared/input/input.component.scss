@@ -43,9 +43,8 @@
 
     input {
       border: none;
-      min-width: 0;
-      flex-grow: 0;
-      width: 10rem;
+      width: 100%;
+      flex-grow: 2;
 
       &:focus-visible {
         outline: none;
@@ -53,6 +52,7 @@
     }
 
     .error-text {
+      min-width: 5rem;
       flex-grow: 1;
       text-align: end;
       color: $error;

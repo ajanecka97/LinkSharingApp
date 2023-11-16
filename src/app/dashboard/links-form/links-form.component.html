@@ -8,17 +8,13 @@
       </p>
     </header>
     <div class="form__links-area">
-      <button class="btn btn-secondary w-100">+ Add new link</button>
-      <div class="form__links-area__links--empty">
-        <img src="/assets/images/illustration-empty.svg" alt="No links image" />
-        <div>
-          <h1>Let's get you started</h1>
-          <p>
-            Use the “Add new link” button to get started. Once you have more
-            than one link, you can reorder and edit them. We’re here to help you
-            share your profiles with everyone!
-          </p>
-        </div>
+      <button class="btn btn-secondary w-100" (click)="addNewLink($event)">
+        + Add new link
+      </button>
+      <div *ngIf="linkForms.length; else emptyTemplate">
+        <ng-container *ngFor="let linkForm of linkForms.controls">
+          <app-links-form-item [form]="linkForm"></app-links-form-item>
+        </ng-container>
       </div>
     </div>
   </div>
@@ -26,3 +22,17 @@
     <button class="btn">Save</button>
   </div>
 </form>
+
+<ng-template #emptyTemplate
+  ><div class="form__links-area__links--empty">
+    <img src="/assets/images/illustration-empty.svg" alt="No links image" />
+    <div>
+      <h1>Let's get you started</h1>
+      <p>
+        Use the “Add new link” button to get started. Once you have more than
+        one link, you can reorder and edit them. We’re here to help you share
+        your profiles with everyone!
+      </p>
+    </div>
+  </div></ng-template
+>

@@ -1,18 +1,18 @@
 import { Component, Input } from '@angular/core';
-import { FormControl, ValidationErrors, ReactiveFormsModule } from '@angular/forms';
+import {
+  FormControl,
+  ValidationErrors,
+  ReactiveFormsModule,
+} from '@angular/forms';
 import { BehaviorSubject, Observable, filter, map } from 'rxjs';
 import { NgIf, AsyncPipe } from '@angular/common';
 
 @Component({
-    selector: 'app-input',
-    templateUrl: './input.component.html',
-    styleUrls: ['./input.component.scss'],
-    standalone: true,
-    imports: [
-        NgIf,
-        ReactiveFormsModule,
-        AsyncPipe,
-    ],
+  selector: 'app-input',
+  templateUrl: './input.component.html',
+  styleUrls: ['./input.component.scss'],
+  standalone: true,
+  imports: [NgIf, ReactiveFormsModule, AsyncPipe],
 })
 export class InputComponent {
   @Input() public inputId = '';
@@ -24,7 +24,7 @@ export class InputComponent {
   }
   @Input() public label = '';
   @Input() public icon = '';
-  @Input() public placeholder = '';
+  @Input() public placeholder: string | null = null;
   @Input() public inputType = '';
 
   public formControl: FormControl = new FormControl();

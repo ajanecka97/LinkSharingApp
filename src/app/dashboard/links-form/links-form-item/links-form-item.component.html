@@ -1,0 +1,12 @@
+<form [formGroup]="form">
+  <div>
+    <span>Link #{{ orderNumber }}</span>
+    <button>Remove</button>
+  </div>
+  <app-input label="Platform" inputType="select"></app-input>
+  <app-input
+    label="Link"
+    placeholder="e.g. https://www.github.com/johnappleseed"
+    icon="/assets/images/icon-link.svg"
+  ></app-input>
+</form>
