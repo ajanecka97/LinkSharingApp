@@ -1,4 +1,4 @@
-@import "variables", "typography", "button";
+@import "variables", "typography", "button", "input";
 
 html,
 body {
@@ -25,5 +25,11 @@ body {
 }
 
 .w-100 {
+  width: 100%;
+}
+
+.divider {
+  background-color: $border;
+  height: 0.0625rem;
   width: 100%;
 }

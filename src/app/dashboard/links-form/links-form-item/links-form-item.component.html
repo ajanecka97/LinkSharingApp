@@ -3,7 +3,11 @@
     <span>Link #{{ orderNumber }}</span>
     <button>Remove</button>
   </div>
-  <app-input label="Platform" inputType="select"></app-input>
+  <app-select
+    [id]="'link-form-select-' + orderNumber"
+    label="Platform"
+    [options]="selectOptions"
+  ></app-select>
   <app-input
     label="Link"
     placeholder="e.g. https://www.github.com/johnappleseed"
