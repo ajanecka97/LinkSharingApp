@@ -1,22 +1,8 @@
-<div class="input" [class.focused]="inputFocused$ | async">
-  <label [for]="inputId">{{ label }}</label>
-  <div class="input-box" #selectInput>
-    <img />
-    <input
-      class="body-m"
-      [id]="inputId"
-      [value]="selectedOption?.label"
-      (focus)="inputFocusedSubject$.next(true)"
-    />
-  </div>
-</div>
-
-<div #selectBox [hidden]="!(inputFocused$ | async)" class="select-box">
-  <ng-container *ngFor="let option of options">
-    <button class="select-option" (click)="selectOption(option)">
-      <svg-icon [src]="option.icon"></svg-icon>
+<mat-form-field>
+  <mat-select>
+    <mat-option *ngFor="let option of options" [value]="option.value">
+      <mat-icon aria-hidden="false" [svgIcon]="option.icon"></mat-icon>
       {{ option.label }}
-    </button>
-    <div class="divider"></div>
-  </ng-container>
-</div>
+    </mat-option>
+  </mat-select>
+</mat-form-field>

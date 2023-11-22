@@ -9,13 +9,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter } from '@angular/router';
 import { routes } from './app/routes';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 
 bootstrapApplication(AppComponent, {
     providers: [
-        importProvidersFrom(BrowserModule, ReactiveFormsModule, AngularSvgIconModule.forRoot()),
-        provideHttpClient(withInterceptorsFromDi()),
-        provideRouter(routes)
-    ]
+    importProvidersFrom(BrowserModule, ReactiveFormsModule, AngularSvgIconModule.forRoot()),
+    provideHttpClient(withInterceptorsFromDi()),
+    provideRouter(routes),
+    provideAnimations()
+]
 })
   .catch(err => console.error(err));
